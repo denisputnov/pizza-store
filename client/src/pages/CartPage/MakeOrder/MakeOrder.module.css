@@ -1,0 +1,48 @@
+.MakeOrder {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Summary {  
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ButtonsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ButtonsWrapper > button {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 20px;
+  min-width: 240px;
+  font-size: 18px;
+  border: 1px solid #780a15de;
+  border-radius: 10px;
+  background: #780a15cc;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.ButtonsWrapper > button:hover {
+  background: #780a15de;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
+}
+
+.Attention > span {
+  color: #780a15cc;
+}
+
+@media(max-width: 768px) {
+  .MakeOrder {
+    flex-direction: column;
+  }
+}

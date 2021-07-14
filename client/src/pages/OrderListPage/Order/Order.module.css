@@ -1,0 +1,85 @@
+.Order {
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: scroll;
+}
+
+.Order table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px 0;
+  font-size: 1em;
+}
+
+.Order table td {
+  padding: 12px 10px 16px;
+  width: calc(100% / 6);
+}
+.Order table thead {
+  border-bottom: 2px solid #d8d8d8;
+}
+
+.Order table thead th {
+  text-align: left;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.Order table tbody tr:nth-child(2n) {
+  background: rgb(243, 243, 243);
+}
+
+.Order table tbody tr:hover {
+  background: #e8f6ff;
+}
+
+.Order table tr {
+  border-bottom: 1px solid #e8e9eb;
+}
+
+.CustomerAndControlls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CustomerInfo {
+  display: flex;
+  gap: 15px;
+  align-items:baseline;
+}
+.CustomerInfo > p {
+  color: #585858;
+  height: 100%;
+  padding-left: 15px;
+  border-left: 1px solid #e8e9eb;
+}
+
+.CustomerInfo strong {
+  color: #000;
+  font-weight: 500;
+}
+
+.CustomerInfo > div > p {
+  margin: 0 0 8px;
+}
+
+.CloseOrder {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #3fb95a;
+  border-radius: 20px;
+  border: 2px solid #309b47;
+  cursor: pointer;
+}
+
+.CloseOrder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: no-repeat center url(ok.svg);
+  background-size: 100% 100%;
+  opacity: .25;
+}

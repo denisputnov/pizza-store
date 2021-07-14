@@ -1,0 +1,111 @@
+.Header {
+  position: sticky;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+  background: #780a15cc;
+  z-index: 10000;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.Logo {
+  height: 70px;
+  width: 220px;
+  background: no-repeat url(./logo.svg);
+  background-size: 100% 100%;
+}
+
+.Link {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: calc(14px + 0.5vw);
+}
+
+.Link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  background-color: #fff;
+}
+
+.Link:hover::after,
+.Link.LinkActive::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.LinkMenu {
+
+}
+
+.LinkCart {
+
+}
+
+.LinkLogin {
+
+}
+
+.LinkHelp {
+
+}
+
+.LinkPhone {
+
+}
+
+@media(max-width: 1200px) {
+  .NavBar {
+    padding: 0 20px;
+  }
+}
+
+@media(max-width: 768px) {
+  .Header {
+    height: unset;
+  }
+  .NavBar {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .Logo {
+    order: -2;
+    grid-column: 1/3;
+  }
+  .Link {
+    width: max-content;
+    font-size: calc(12px + 0.8vw);
+  }
+  .LinkPhone {
+    order: -1;
+    width: max-content;
+    margin-left: auto;
+    text-align: right;
+    grid-column: 3/5;
+  }
+}
+
+@media(max-width: 576px) {
+  .Logo {
+    width: 40vw;
+  }
+}

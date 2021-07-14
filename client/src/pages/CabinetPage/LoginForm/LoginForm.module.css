@@ -1,0 +1,102 @@
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.LoginForm > input {
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 1px solid rgb(163, 163, 163);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+  transition: all 300ms ease-in-out;
+}
+
+.Controls {
+  display: flex;
+  gap: 20px;
+}
+
+.Controls > button {
+  min-width: 200px;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  background: #780a15cc;
+  border: 1px solid #63060f;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.Controls > button:disabled {
+  background-color: #c0c0c0;
+  border: 1px solid #aaaaaa;
+}
+
+.Controls > button:disabled:hover {
+  background-color: #c0c0c0;
+}
+
+.Controls > button:hover {
+  background: #780a15de;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 25%);
+}
+
+.LoginForm > input.Invalid {
+  box-shadow: 0 0 5px #971926;
+  border: 1px solid red;
+  transition: all 1s ease-in-out 1400ms;
+}
+
+.LoginForm mark {
+  background-color: transparent;
+  margin: 0;
+  opacity: 0;
+  color: #780a15cc;
+  transition: all 300ms ease-in-out;
+}
+
+.LoginForm > input.Invalid + mark {
+  opacity: 1;
+  margin: 10px 0;
+  transition: all 300ms ease-in-out 1400ms;
+}
+
+.Error {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  color: white;
+  background-color: #780a15cc;
+  opacity: 0;
+  padding: 0 10px;
+  transition: all 200ms ease-in-out;
+  border-radius: 10px;
+  border: 1px solid #971926;
+}
+
+.ActiveError {
+  height: 100%;
+  opacity: 1;
+  margin: 0 0 20px;
+  padding: 10px;
+  box-shadow: 0 0 5px #971926;
+}
+
+@media (max-width: 1200px) {
+  .LoginForm {
+    padding: 0 20px
+  }
+}
+
+@media (max-width: 576px) {
+  .Controls {
+    flex-direction: column;
+
+  }
+}

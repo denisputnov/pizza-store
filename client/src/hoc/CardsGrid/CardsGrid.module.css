@@ -1,0 +1,40 @@
+.CardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+@media(max-width: 1200px) {
+  .CardsGrid {
+    padding: 0 10px;
+  }
+}
+
+@media(max-width: 968px) {
+  .CardsGrid,
+  .MobileSingle {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 5px;
+    gap: 5px;
+  }
+}
+
+@media(max-width: 768px) {
+  .MobileSingle {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+
+@media(max-width: 576px) {
+  .CardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media(max-width: 425px) {
+  .MobileSingle {
+    grid-template-columns: 1fr;
+  }
+}

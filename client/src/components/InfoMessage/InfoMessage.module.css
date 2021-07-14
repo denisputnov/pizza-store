@@ -1,0 +1,38 @@
+.InfoMessage {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 320px;
+  background: #780a15cc;
+  border: 2px solid #780a15de;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+  color: #fff;
+  overflow: hidden;
+  font-size: 18px;
+  z-index: 1000;
+  transform: translateY(400px);
+  transition: all 1s ease-out;
+  opacity: 0;
+}
+
+.InfoMessage > p {
+  word-wrap: normal;
+  text-align: center;
+}
+
+
+.InfoMessageActive {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media(max-width: 420px) {
+  .InfoMessage {
+    width: calc(100vw - 40px);
+  }
+}

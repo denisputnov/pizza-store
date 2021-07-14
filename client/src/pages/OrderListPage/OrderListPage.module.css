@@ -1,0 +1,28 @@
+.OrderList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Tabs {
+  display: flex;
+  gap: 20px
+}
+
+.Tabs > button {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+.Tabs > button.Active::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: black;
+  left: 0;
+  bottom: -6px;
+  right: 0;
+}

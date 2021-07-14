@@ -1,0 +1,63 @@
+.CategoryCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2) , 0 5px 50px rgba(0, 0, 0, .1);
+  text-decoration: none;
+  transition: all 200ms ease-in;
+}
+
+.CategoryCard:hover {
+  transform: scale(1.02);
+}
+
+.CategoryCard:hover img {
+  transform: scale(1.05);
+}
+
+.CategoryCard:hover div::after {
+  transform: scale(1.02);
+}
+
+.CategoryCard img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 400ms ease-in-out;
+}
+
+.CategoryCard div {
+  position: relative;
+  width: 100%;
+  padding-top: 90%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.CategoryCard div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+  transition: all 400ms ease-in-out;
+}
+
+.CategoryName {
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: calc(12px + 12 * ((100vw - 320px) / (1280 - 320)));
+}
+
+@media (max-width: 968px) {
+  .CategoryName {
+    font-size: calc(18px + 10 * ((100vw - 320px) / (1280 - 320)));
+  }
+}

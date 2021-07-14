@@ -1,0 +1,68 @@
+.InfoWrapper * {
+  margin: 0;
+  padding: 0;
+}
+
+.InfoTop {
+  display: grid;
+  margin: 20px 0;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.InfoPhone > a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.InfoGrid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.InfoGrid ul {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+  list-style-type: "— ";
+}
+
+.InfoGrid p {
+  position: relative;
+  max-width: max-content;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 40px 0 20px; 
+}
+
+.InfoGrid p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  transition: all 200ms ease-in-out;
+}
+
+.InfoGrid p:hover::after {
+  width: 100%;
+}
+
+@media(max-width: 1200px) {
+  .InfoWrapper {
+    padding: 0 20px;
+  }
+}
+
+@media(max-width: 576px) {
+  .InfoGrid,
+  .InfoTop {
+    grid-template-columns: 1fr;
+  }
+  .InfoPhone {
+    margin-top: 20px;
+  }
+}

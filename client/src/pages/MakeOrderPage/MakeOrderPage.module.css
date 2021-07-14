@@ -1,0 +1,64 @@
+.MakeOrderForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.MakeOrderForm > * {
+  display: block;
+  font-size: 20px;
+}
+
+.MakeOrderForm > label {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.MakeOrderForm > input {
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(163, 163, 163);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+  transition: all 300ms ease-in-out;
+}
+.MakeOrderForm > input:last-of-type {
+  margin-bottom: 25px;
+}
+
+.MakeOrderForm > label > mark {
+  color: red;
+  background-color: transparent;
+}
+
+.Example {
+  margin: 5px 0 25px 12px;
+  color: #a09f9f;
+  font-size: 12px;
+}
+
+.MakeOrderForm > input.Invalid {
+  box-shadow: 0 0 5px #971926;
+  border: 1px solid red;
+  transition: all 1s ease-in-out 1400ms;
+}
+
+.MakeOrderForm > button {
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  background: #780a15cc;
+  border: 1px solid #63060f;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.MakeOrderForm > button:hover {
+  background: #780a15de;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 25%);
+}

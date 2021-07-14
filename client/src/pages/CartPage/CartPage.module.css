@@ -1,0 +1,17 @@
+.CartContent {
+  position: relative;
+}
+
+.EmptyTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(155, 155, 155);
+}
+
+@media (max-width: 1200px) {
+  .CartContent {
+    padding: 0 5px;
+  }
+}
